@@ -39,7 +39,7 @@
       - A simpler API to manage temporal dependencies between resource scopes; and
       - A new API to copy Java arrays to and from memory segments.
     - see example `SortExternalOfHeap.java`
-    - **TODO** example from jep does not compile / work
+    - **TODO** example from jep does not work
 - [JEP 420:    Pattern Matching for switch (Second Preview)](https://openjdk.java.net/jeps/420)
     - see example `SwitchPatternMatching.java`
     - TODO
