@@ -42,6 +42,7 @@
     - **TODO** example from jep does not compile / work
 - [JEP 420:    Pattern Matching for switch (Second Preview)](https://openjdk.java.net/jeps/420)
     - see example `SwitchPatternMatching.java`
+    - TODO
 - [JEP 421:    Deprecate Finalization for Removal](https://openjdk.java.net/jeps/421)
     - TODO
 
