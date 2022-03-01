@@ -9,18 +9,25 @@
 # Java 18 Features
 
 - [JEP 400:    UTF-8 by Default](https://openjdk.java.net/jeps/400)
-    - TODO
+    - Specify UTF-8 as the default charset of the standard Java APIs. With this change, APIs that depend upon the default charset will behave consistently across all implementations, operating systems, locales, and configurations.
 - [JEP 408:    Simple Web Server](https://openjdk.java.net/jeps/408)
-    - TODO
+    - Provide a command-line tool to start a minimal web server that serves static files only. No CGI or servlet-like functionality is available. This tool will be useful for prototyping, ad-hoc coding, and testing purposes, particularly in educational contexts.
+    - start om cmd with `jwebserver`. By default, the server runs in the foreground and binds to the loopback address and port 8000. By default, files are served from the current directory.
+    - The server can also be started via code, see example `SimpleWebServer.java`.
 - [JEP 413:    Code Snippets in Java API Documentation](https://openjdk.java.net/jeps/413)
-    - TODO
+    - Introduce an `@snippet` tag for JavaDoc's Standard Doclet
+    - see example `MyApi.java`
+    - build javadoc via `./mvnw javadoc:javadoc`
 - [JEP 416:    Reimplement Core Reflection with Method Handles](https://openjdk.java.net/jeps/416)
-    - TODO
+    - Reimplement java.lang.reflect.Method, Constructor, and Field on top of java.lang.invoke method handles. Making method handles the underlying mechanism for reflection will reduce the maintenance and development cost of both the java.lang.reflect and java.lang.invoke APIs.
 - [JEP 417:    Vector API (Third Incubator)](https://openjdk.java.net/jeps/417)
     - see example `Scalar.java`
-    - update to second incubator: TODO
-- [JEP 418:   Internet-Address Resolution SPI](https://openjdk.java.net/jeps/418)
-    - TODO
+    - update to second incubator: enhancements in response to feedback as well as performance improvements and other significant implementation enhancements.
+      - Support the ARM Scalar Vector Extension (SVE) platform.
+      - Improve the performance of vector operations that accept masks on architectures that support masking in hardware.
+- [JEP 418:    Internet-Address Resolution SPI](https://openjdk.java.net/jeps/418)
+    - Define a service-provider interface (SPI) for host name and address resolution, so that java.net.InetAddress can make use of resolvers other than the platform's built-in resolver.
+    - see example `AllLocalInetAddressResolverProvider.java`
 - [JEP 419:    Foreign Function & Memory API (Second Incubator)](https://openjdk.java.net/jeps/419)
     - TODO
     - Introduce an API by which Java programs can interoperate with code and data outside of the Java runtime. Combination of 2 APIs introduced in previous JDKs:
