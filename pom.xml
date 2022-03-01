@@ -44,6 +44,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
+                    <release>${java.version}</release>
                     <parameters>true</parameters>
                     <compilerArgs>
                         <arg>--enable-preview</arg>
@@ -69,13 +70,6 @@
                             <Automatic-Module-Name>com.github.xtermi2.java18</Automatic-Module-Name>
                         </manifestEntries>
                     </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <release>${java.version}</release>
                 </configuration>
             </plugin>
         </plugins>
