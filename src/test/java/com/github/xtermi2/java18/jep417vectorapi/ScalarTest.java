@@ -1,4 +1,4 @@
-package com.github.xtermi2.java17.jep414vectorapi;
+package com.github.xtermi2.java18.jep417vectorapi;
 
 import org.junit.jupiter.api.Test;
 

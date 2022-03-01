@@ -29,10 +29,15 @@
     - Define a service-provider interface (SPI) for host name and address resolution, so that java.net.InetAddress can make use of resolvers other than the platform's built-in resolver.
     - see example `AllLocalInetAddressResolverProvider.java`
 - [JEP 419:    Foreign Function & Memory API (Second Incubator)](https://openjdk.java.net/jeps/419)
-    - TODO
     - Introduce an API by which Java programs can interoperate with code and data outside of the Java runtime. Combination of 2 APIs introduced in previous JDKs:
     - Foreign-Memory Access API (incubator in 14, 15 and 16)
     - Foreign Linker API (incubator in 16)
+    - Changes since first incubator
+      - Support for more carriers, such as boolean and MemoryAddress, in memory access var handles;
+      - A more general dereference API, available in both the MemorySegment and MemoryAddress interfaces;
+      - A simpler API to obtain downcall method handles, where passing a MethodType parameter is no longer required;
+      - A simpler API to manage temporal dependencies between resource scopes; and
+      - A new API to copy Java arrays to and from memory segments.
     - see example `SortExternalOfHeap.java`
     - **TODO** example from jep does not compile / work
 - [JEP 420:    Pattern Matching for switch (Second Preview)](https://openjdk.java.net/jeps/420)
@@ -43,3 +48,4 @@
 ##### Other References
 
 - https://openjdk.java.net/projects/jdk/18/
+- https://github.com/carldea/panama4newbies

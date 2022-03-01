@@ -42,6 +42,7 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
@@ -50,15 +51,16 @@
                     <compilerArgs>
                         <arg>--enable-preview</arg>
                         <arg>--add-modules</arg>
-                        <arg>jdk.incubator.vector</arg>
+                        <arg>jdk.incubator.foreign,jdk.incubator.vector</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
-                    <argLine>--enable-preview -Dforeign.restricted=permit --add-modules jdk.incubator.vector</argLine>
+                    <argLine>--enable-preview --enable-native-access=ALL-UNNAMED -Dforeign.restricted=permit --add-modules jdk.incubator.foreign,jdk.incubator.vector</argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -81,6 +83,7 @@
                     <release>${java.version}</release>
                     <source>${java.version}</source>
                     <additionalOptions>--enable-preview --add-modules jdk.incubator.vector</additionalOptions>
+                    <excludePackageNames>com.github.xtermi2.java18.jep419foreignfunctionsmemory</excludePackageNames>
                 </configuration>
             </plugin>
         </plugins>

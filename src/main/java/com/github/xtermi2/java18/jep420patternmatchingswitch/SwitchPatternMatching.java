@@ -1,4 +1,4 @@
-package com.github.xtermi2.java17.jep406patternmatchingswitch;
+package com.github.xtermi2.java18.jep420patternmatchingswitch;
 
 public class SwitchPatternMatching {
 
