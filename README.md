@@ -44,7 +44,7 @@
     - see example `SwitchPatternMatching.java`
     - TODO
 - [JEP 421:    Deprecate Finalization for Removal](https://openjdk.java.net/jeps/421)
-    - TODO
+    - `Object#finalize()` is deprecated since java 9, now it's also marked as `forRemoval`. Finalization remains enabled by default for now, but can be disabled to facilitate early testing. In a future release it will be disabled by default, and in a later release it will be removed.
 
 ##### Other References
 
