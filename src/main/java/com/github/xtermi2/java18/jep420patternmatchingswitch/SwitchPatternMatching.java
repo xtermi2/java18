@@ -22,7 +22,7 @@ public class SwitchPatternMatching {
 
     static void testSize(Object s) {
         switch (s) {
-            case String large && (large.length() > 1000) -> System.out.println("Large string");
+            case String large && large.length() > 1000 -> System.out.println("Large string");
             case String small -> System.out.println("Small string " + small.length());
             default -> System.out.println("Non-string");
         }
