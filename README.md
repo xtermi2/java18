@@ -42,7 +42,9 @@
     - **TODO** example from jep does not work
 - [JEP 420:    Pattern Matching for switch (Second Preview)](https://openjdk.java.net/jeps/420)
     - see example `SwitchPatternMatching.java`
-    - TODO
+    - The enhancements since the first preview are:
+      - Dominance checking now forces a constant case label to appear before a guarded pattern of the same type, for readability.
+      - Exhaustiveness checking of switch blocks is now more precise with sealed hierarchies where the permitted direct subclass only extends an instantiation of the (generic) sealed superclass.
 - [JEP 421:    Deprecate Finalization for Removal](https://openjdk.java.net/jeps/421)
     - `Object#finalize()` is deprecated since java 9, now it's also marked as `forRemoval`. Finalization remains enabled by default for now, but can be disabled to facilitate early testing. In a future release it will be disabled by default, and in a later release it will be removed.
 
