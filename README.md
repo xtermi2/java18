@@ -38,8 +38,7 @@
       - A simpler API to obtain downcall method handles, where passing a MethodType parameter is no longer required;
       - A simpler API to manage temporal dependencies between resource scopes; and
       - A new API to copy Java arrays to and from memory segments.
-    - see example `SortExternalOfHeap.java`
-    - **TODO** example from jep does not work
+    - see example `ForeignFunctionAndMemoryAPI.java`
 - [JEP 420:    Pattern Matching for switch (Second Preview)](https://openjdk.java.net/jeps/420)
     - see example `SwitchPatternMatching.java`
     - The enhancements since the first preview are:
